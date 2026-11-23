@@ -1,0 +1,29 @@
+[Unit]
+Description=BilgiKutusu Plus yerel bilgi deposu
+After=network.target
+
+[Service]
+Type=simple
+User=bilgikutusu-plus
+Group=bilgikutusu-plus
+WorkingDirectory=/opt/bilgikutusu-plus
+ExecStart=/usr/bin/python3 -B /opt/bilgikutusu-plus/app.py --config /etc/bilgikutusu-plus/config.json
+Environment=PYTHONUNBUFFERED=1
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=10
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+RestrictAddressFamilies=AF_INET AF_UNIX
+CapabilityBoundingSet=
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

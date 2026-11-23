@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#214e3c">
+  <title>BilgiKutusu Plus · Yerel bilgi deposu</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#files">Dosyalara geç</a>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="BilgiKutusu Plus ana klasör"><span class="brand-icon" aria-hidden="true">B</span><span>BilgiKutusu <strong>Plus</strong></span></a>
+    <span id="connection" class="connection" role="status">Bağlanıyor…</span>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="welcome">
+      <div><p class="eyebrow">ÇEVRİMDIŞI BİLGİ DEPOSU</p><h1 id="welcome">Bilgi, elinin altında.</h1><p>Depodaki dosyalarına aynı ağ üzerinden ulaş.<br>Kaydedilmiş içerikleri açmak için internet gerekmez.</p></div>
+      <div class="hero-mark" aria-hidden="true"><span>Plus</span><small>SADE. YEREL.</small></div>
+    </section>
+    <nav class="shortcuts" aria-label="Plus bölümleri"><a href="#Haritalar">Haritalar</a><a href="#EgitimVideolari">Eğitim videoları</a><a href="#Tarim">Tarım</a><a href="#Balikcilik">Balıkçılık</a></nav>
+    <section id="files" class="depot" aria-labelledby="files-title" tabindex="-1">
+      <div class="section-top"><div><h2 id="files-title">Dosyalarım</h2><p id="count" aria-live="polite">İçerikler yükleniyor…</p></div><button id="refresh" class="button" type="button">↻ Yenile</button></div>
+      <nav id="breadcrumbs" aria-label="Klasör yolu"></nav>
+      <div class="toolbar"><label class="search"><span>Dosya veya klasör adı</span><input id="search" type="search" placeholder="Bu klasörde ara…" autocomplete="off"></label><label class="type-filter"><span>Tür</span><select id="filter"><option value="all">Tüm içerikler</option><option value="folder">Klasörler</option><option value="document">Belgeler</option><option value="image">Görseller</option><option value="media">Ses ve video</option><option value="other">Diğer dosyalar</option></select></label></div>
+      <div id="message" class="message" role="status">Dosyalar hazırlanıyor…</div>
+      <div id="grid" class="grid" aria-live="polite" aria-busy="true"></div>
+    </section>
+    <details class="help"><summary>Nasıl kullanılır?</summary><div><p><strong>1.</strong> Telefonunu veya bilgisayarını BilgiKutusu’nun bulunduğu ağa bağla.</p><p><strong>2.</strong> Bir klasör seç. Dosyayı görüntülemek için adına, kaydetmek için <strong>İndir</strong> düğmesine dokun.</p><p><strong>3.</strong> Yeni içerik eklemek için cihazdaki içerik klasörüne dosya kopyala ve burada <strong>Yenile</strong> düğmesine bas.</p><p>Arama yalnızca açık klasördeki adları filtreler. Dosyaların açılması cihazının desteklediği biçimlere bağlıdır. Bu sayfadan dosya yüklenmez veya silinmez.</p></div></details>
+    <noscript><p>Dosya listesini görmek için tarayıcında JavaScript’i etkinleştir.</p></noscript>
+  </main>
+  <footer><span>BilgiKutusu Plus <small id="version"></small></span><span>Orta seviye paket</span></footer>
+</body>
+</html>

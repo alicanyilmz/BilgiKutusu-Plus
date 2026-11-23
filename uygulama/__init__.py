@@ -1,0 +1,1 @@
+"""BilgiKutusu Plus uygulama paketi."""
